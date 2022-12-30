@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.dog voice static site</title>
+    <style>
+        button {
+            width: 100px;
+            height: 100px;
+            font-size: 80px;
+            background-color: powderblue;
+            border-radius: 20%;
+            border-color: lightpink;
+        }
+
+        h1 {
+            font-family: 'Party LET','Herculanum',sans-serif;
+        }
+    </style>
+</head>
+<body style="align-items: center; text-align: center; margin-bottom: 100px;">
+    <h1><a>💗</a>supercalifragilisticexpialidocious dog<a>💗</a></h1>
+    <p><img style="width: 80%; height: auto; margin: 20px,100px" src="src/assets/m-dog.jpg" alt="A dog walking outside."/></p>
+    <section class="buttons">
+        <button id="b0" onclick="audio()">🤧</button>
+        <button id="b1" onclick="audio()">🥹</button>
+        <button id="b2" onclick="audio()">😴</button>
+        <button id="b3" onclick="audio()">🥺</button>
+        <button id="b4" onclick="audio()">🤤</button>
+        <button id="b5" onclick="audio()">🗯️</button>
+    </section>
+    <section id="btn_audio">
+        <audio>
+            <source class="shun" src="./src/assets/くしゃみ.mp3" type="audio/mp3">
+        </audio>
+        <audio>
+            <source class="shun" src="./src/assets/スーン.mp3" type="audio/mp3">
+        </audio>
+        <audio>
+            <source class="shun" src="./src/assets/寝息.mp3" type="audio/mp3">
+        </audio>
+        <audio>
+            <source class="shun" src="./src/assets/クーン.mp3" type="audio/mp3">
+        </audio>
+        <audio>
+            <source class="shun" src="./src/assets/嚥下音.mp3" type="audio/mp3">
+        </audio>
+        <audio>
+            <source class="shun" src="./src/assets/わん.mp3" type="audio/mp3">
+        </audio>
+    </section>
+    <script>
+        const image = document.querySelector("img");
+        const heart = document.querySelectorAll("a");
+        heart.forEach((ele) => ele.addEventListener("click", () => {
+            image.src = "src/assets/back-dog.png";
+            image.alt = "dog's bottom"
+            setTimeout(() => {
+                image.src = "src/assets/m-dog.jpg"
+                image.alt = "A dog walking outside."
+            }, 1000);
+        }))
+        function audio() {
+            const buttons = document.querySelectorAll("button");
+            const audios = document.querySelectorAll("audio");
+            const elem = window.event.target;
+            const elemId = elem.id;
+            audios[elemId[1]].currentTime = 0;
+            audios[elemId[1]].play();
+        }
+    </script>
+</body>
+</html>
