@@ -22,7 +22,7 @@
 </head>
 <body style="align-items: center; text-align: center; margin-bottom: 100px;">
     <h1><a>💗</a>supercalifragilisticexpialidocious dog<a>💗</a></h1>
-    <p><img style="width: 80%; height: auto; margin: 20px,100px" src="src/assets/m-dog.JPG" alt="A dog walking outside."/></p>
+    <p><img style="width: 80%; height: auto; margin: 20px,100px" src="assets/images/m-dog.jpg" alt="A dog walking outside."/></p>
     <section class="buttons">
         <button id="b0" onclick="audio()">🤧</button>
         <button id="b1" onclick="audio()">🥹</button>
@@ -33,32 +33,32 @@
     </section>
     <section id="btn_audio">
         <audio>
-            <source class="shun" src="./src/assets/くしゃみ.mp3" type="audio/mp3">
+            <source class="shun" src="./assets/voices/くしゃみ.mp3" type="audio/mp3">
         </audio>
         <audio>
-            <source class="shun" src="./src/assets/スーン.mp3" type="audio/mp3">
+            <source class="shun" src="./assets/voices/スーン.mp3" type="audio/mp3">
         </audio>
         <audio>
-            <source class="shun" src="./src/assets/寝息.mp3" type="audio/mp3">
+            <source class="shun" src="./assets/voices/寝息.mp3" type="audio/mp3">
         </audio>
         <audio>
-            <source class="shun" src="./src/assets/クーン.mp3" type="audio/mp3">
+            <source class="shun" src="./assets/voices/クーン.mp3" type="audio/mp3">
         </audio>
         <audio>
-            <source class="shun" src="./src/assets/嚥下音.mp3" type="audio/mp3">
+            <source class="shun" src="./assets/voices/嚥下音.mp3" type="audio/mp3">
         </audio>
         <audio>
-            <source class="shun" src="./src/assets/わん.mp3" type="audio/mp3">
+            <source class="shun" src="./assets/voices/わん.mp3" type="audio/mp3">
         </audio>
     </section>
     <script>
         const image = document.querySelector("img");
         const heart = document.querySelectorAll("a");
         heart.forEach((ele) => ele.addEventListener("click", () => {
-            image.src = "src/assets/back-dog.png";
+            image.src = "assets/images/back-dog.png";
             image.alt = "dog's bottom"
             setTimeout(() => {
-                image.src = "src/assets/m-dog.jpg"
+                image.src = "assets/images/m-dog.jpg"
                 image.alt = "A dog walking outside."
             }, 1000);
         }))
