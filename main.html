@@ -6,7 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>M.dog voice static site</title>
 </head>
-<body>
-    
+<body style="align-items: center; text-align: center; margin-bottom: 100px;">
+    <h1><a>💗</a>supercalifragilisticexpialidocious dog<a>💗</a></h1>
+    <p><img style="width: 80%; height: auto; margin: 20px,100px" src="src/assets/m-dog.jpg" alt="A dog walking outside."/></p>
+    <section class="buttons">
+        <button>🤧</button>
+        <button>🥹</button>
+        <button>😴</button>
+        <button>🥺</button>
+        <button>🤤</button>
+        <button>🗯️</button>
+    </section>
+    <script>
+        const image = document.querySelector("img");
+        const heart = document.querySelectorAll("a");
+        heart.forEach((ele) => ele.addEventListener("click", () => {
+            image.src = "src/assets/back-dog.png";
+            setTimeout(() => {
+                image.src = "src/assets/m-dog.jpg"
+            }, 1000);
+        }))
+    </script>
 </body>
 </html>
